@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Görev Listem</h2>
+
+<hr />
+
+<!-- Button trigger modal -->
+<button class="btn btn-success" data-toggle="modal" data-target="#successyModal">
+    <i class="fa fa-plus"></i> Yeni Ekle
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="successyModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content border-success">
+            <div class="modal-header bg-success">
+                <h5 class="modal-title text-white">Yeni Görev Bilgileri</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tenetur iusto dolorum quisquam porro fugit id  totam at
+                    saepe hic sunt. Optio placeat nisi dignissimos cupiditate
+                    error! Rem vero doloribus ipsum alias enim,  ad maximeillum
+                    fugiat corrupti praesentium iure nam, impedit reprehenderit
+                    beatae reiciendis voluptates molestias. Repellat tempore ex
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+                    alias adipisci saepe veniam labore laudantium velit, ad beatae, ex
+                    sequi illum pariatur mollitia. Placeat voluptatem quas voluptatibus.
+                    numquam officia nulla
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times"></i> Kapat</button>
+                <button type="submit" class="btn btn-success"><i class="fa fa-times"></i> Bilgileri kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
