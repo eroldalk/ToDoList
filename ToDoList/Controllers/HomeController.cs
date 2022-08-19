@@ -13,6 +13,11 @@ namespace ToDoList.Controllers
             return View();
         }
 
-     
+        public ActionResult Kaydet()
+        {
+            return RedirectToAction("Listele");
+        }
+
+
     }
 }
