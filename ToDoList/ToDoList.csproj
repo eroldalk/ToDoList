@@ -137,10 +137,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Connectionstring.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Connectionstring.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Connectionstring.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Connectionstring.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Connectionstring.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\list.cs">
+      <DependentUpon>Connectionstring.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -932,6 +940,12 @@
     <Content Include="Models\Connectionstring.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Connectionstring.Context.cs</LastGenOutput>
+      <DependentUpon>Connectionstring.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Connectionstring.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Connectionstring.edmx</DependentUpon>
+      <LastGenOutput>Connectionstring.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -967,9 +981,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Connectionstring.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\Connectionstring.edmx.diagram">
+    <Content Include="Models\Connectionstring.edmx.diagram">
       <DependentUpon>Connectionstring.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

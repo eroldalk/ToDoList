@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ToDoList.Models;
 
 namespace ToDoList.Controllers
 {
@@ -10,11 +11,16 @@ namespace ToDoList.Controllers
     {
         public ActionResult Listele()
         {
+            TodolistEntitiesConnectionstring db = new TodolistEntitiesConnectionstring();
+            ViewBag.liste = db.lists;
             return View();
         }
-
-        public ActionResult Kaydet()
+        [HttpPost]
+        public ActionResult Kaydet(list a)
         {
+            TodolistEntitiesConnectionstring db = new TodolistEntitiesConnectionstring();
+            db.lists.Add(a);
+            db.SaveChanges();
             return RedirectToAction("Listele");
         }
 
